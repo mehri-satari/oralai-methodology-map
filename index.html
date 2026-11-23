@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OralAI — DEN-Q01 Methodology Map</title>
+<style>
+* {box-sizing:border-box} html,body{margin:0;width:100%;height:100%;font-family:Inter,"Segoe UI",Arial,sans-serif;color:#233047;background:#f6f8fc;overflow:hidden}
+.topbar{position:absolute;z-index:5;left:0;right:0;top:0;background:#ffffffee;backdrop-filter:blur(12px);border-bottom:1px solid #dde4ee;padding:13px 22px;box-shadow:0 2px 14px #2233550b}
+.heading{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}.branding{display:flex;flex-direction:column;gap:4px}.branding strong{font-size:16px;color:#142747}.branding small{font-size:12px;color:#52647e}
+.controls{display:flex;gap:7px;flex-wrap:wrap}.controls button,.jump{border:1px solid #d1dbee;background:#fff;color:#283f62;padding:7px 10px;border-radius:8px;font-weight:600;cursor:pointer}.controls button:hover,.jump:hover{background:#edf3ff;border-color:#97b3f1}.controls button:focus-visible,.jump:focus-visible{outline:3px solid #8db0ff}
+.nav{margin-top:10px;display:flex;align-items:center;gap:7px;overflow:auto;white-space:nowrap;padding-bottom:1px}.nav-label{font-size:11px;letter-spacing:.05em;color:#728196;text-transform:uppercase;font-weight:800;margin-right:5px}.jump{font-size:12px;padding:5px 8px}
+#viewport{position:absolute;inset:115px 0 0;overflow:hidden;cursor:grab;background-color:#fafbfe;background-image:radial-gradient(#dee5f0 1px,transparent 1px);background-size:22px 22px;touch-action:none}#viewport.dragging{cursor:grabbing}
+#stage{position:absolute;top:0;left:0;transform-origin:0 0;will-change:transform}
+.group{position:absolute;border:2px solid #ced7e2;border-radius:8px;background:#ffffff55;pointer-events:none}.group-label{position:absolute;bottom:calc(100% + 10px);left:6px;display:block;max-width:100%;font-size:23px;font-weight:500;color:#52627a;white-space:nowrap}
+.node{position:absolute;background:#fff;border:2px solid var(--accent);border-radius:8px;box-shadow:0 2px 9px #2330470c;overflow:auto;cursor:grab;color:#202a39}
+.node:hover{box-shadow:0 5px 25px #23304720}.node-question{background:#fff9f3}.node-body{padding:17px 18px;font-size:15.2px;line-height:1.45;overflow-wrap:break-word}.node-body h2{font-size:20px;margin:0 0 11px}.node-body h3{font-size:18px;margin:0 0 12px}.node-body p{margin:7px 0 10px}.node-body ul,.node-body ol{padding-left:25px;margin:7px 0}.node-body li{margin:4px 0}.node-body strong{color:#102743}.node-body em{color:#445166}.node-body a{color:#075ab2}
+.connections{position:absolute;top:0;left:0;pointer-events:none;overflow:visible}.line-label{font-size:17px;font-weight:600;fill:#6c4aba;stroke:#fafbfe;stroke-width:5px;paint-order:stroke}
+.help{position:absolute;bottom:18px;left:18px;background:#fffef9ed;border:1px solid #d7e0ee;color:#4e617e;padding:9px 12px;border-radius:9px;z-index:4;font-size:12px;box-shadow:0 2px 10px #2233550c}.zoom{font-variant-numeric:tabular-nums;color:#6d7f97;margin-left:7px;font-size:12px}
+@media(max-width:900px){.topbar{padding:9px 10px}.branding strong{font-size:14px}.controls{gap:4px}.controls button{font-size:12px;padding:6px 7px}#viewport{inset:122px 0 0}.nav{margin-top:7px}.nav-label{display:none}.help{max-width:80%;font-size:11px}}
+@media print{.topbar,.help{display:none}#viewport{inset:0;background:none}html,body{overflow:visible}}
+</style></head><body>
+<header class="topbar"><div class="heading"><div class="branding"><strong>OralAI · DEN-Q01 Methodology Map</strong><small>Six-step benchmark workflow · Portable interactive version of the original Obsidian Canvas</small></div><div class="controls"><button id="fit">Fit entire map</button><button id="plus" aria-label="Zoom in">Zoom +</button><button id="minus" aria-label="Zoom out">Zoom −</button><button id="hundred">100%</button><span class="zoom" id="zoom"></span></div></div><nav class="nav"><span class="nav-label">Jump to</span><button class="jump" data-focus="S1">1. Build the evidence base</button> <button class="jump" data-focus="S2">2. Establish the ground truth</button> <button class="jump" data-focus="S3">3. Run models under controlled conditions</button> <button class="jump" data-focus="S4">4. Score each output</button> <button class="jump" data-focus="S5">5. Make the scoring reliable</button> <button class="jump" data-focus="S6">6. Interpret what results can show</button></nav></header>
+<main id="viewport" aria-label="Interactive methodology diagram"><div id="stage" style="width:6095px;height:2222px"><div class="group" style="left:65px;top:1690px;width:2160px;height:462px" aria-label="Where we are and what comes next"><span class="group-label">Where we are and what comes next</span></div>
+<div class="group" style="left:3225px;top:550px;width:640px;height:1538px" aria-label="Station 4 - Score each output"><span class="group-label">Station 4 - Score each output</span></div>
+<div class="group" style="left:1065px;top:510px;width:640px;height:1062px" aria-label="Station 2 - Establish the ground truth"><span class="group-label">Station 2 - Establish the ground truth</span></div>
+<div class="group" style="left:4365px;top:550px;width:640px;height:1002px" aria-label="Station 5 - Make the scoring reliable"><span class="group-label">Station 5 - Make the scoring reliable</span></div>
+<div class="group" style="left:2025px;top:510px;width:640px;height:886px" aria-label="Station 3 - Run models under controlled conditions"><span class="group-label">Station 3 - Run models under controlled conditions</span></div>
+<div class="group" style="left:5385px;top:550px;width:640px;height:877px" aria-label="Station 6 - Interpret what results can show"><span class="group-label">Station 6 - Interpret what results can show</span></div>
+<div class="group" style="left:105px;top:540px;width:640px;height:856px" aria-label="Station 1 - Build the evidence base"><span class="group-label">Station 1 - Build the evidence base</span></div>
+<svg class="connections" width="6095" height="2222" viewBox="0 0 6095 2222" aria-hidden="true"><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#9267e9"/></marker></defs>
+<path d="M715 734.0 C848.0 734.0, 962.0 729.0, 1095 729.0" fill="none" stroke="#9467e9" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="905.0" y="719.5" text-anchor="middle" class="line-label">every source graded</text>
+<path d="M1675 729.0 C1808.0 729.0, 1922.0 744.0, 2055 744.0" fill="none" stroke="#9467e9" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="1865.0" y="724.5" text-anchor="middle" class="line-label">fixed before any run</text>
+<path d="M2635 744.0 C2852.0 744.0, 3038.0 737.0, 3255 737.0" fill="none" stroke="#9467e9" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="2945.0" y="728.5" text-anchor="middle" class="line-label">outputs scored against ground truth</text>
+<path d="M3835 737.0 C4031.0 737.0, 4199.0 759.0, 4395 759.0" fill="none" stroke="#9467e9" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="4115.0" y="736.0" text-anchor="middle" class="line-label">rules applied by two blind scorers</text>
+<path d="M4975 759.0 C5129.0 759.0, 5261.0 792.0, 5415 792.0" fill="none" stroke="#9467e9" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="5195.0" y="763.5" text-anchor="middle" class="line-label">reliability qualifies results</text>
+<path d="M745 1913.0 C787.0 1913.0, 823.0 1913.0, 865 1913.0" fill="none" stroke="#9467e9" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="805.0" y="1901.0" text-anchor="middle" class="line-label">review</text>
+<path d="M1385 1913.0 C1427.0 1913.0, 1463.0 1913.0, 1505 1913.0" fill="none" stroke="#9467e9" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="1445.0" y="1901.0" text-anchor="middle" class="line-label">then</text>
+</svg>
+<article class="node node-question" data-id="fb1" aria-label="Question for the Board
+How should we source authentic queries for the remaining " style="left:135px;top:1176px;width:580px;height:210px;--accent:#e38d44"><div class="node-body"><h3>Question for the Board</h3>
+<p>How should we source authentic queries for the remaining 29, so the benchmark reflects what researchers, teachers and the public actually ask?</p>
+</div></article>
+<article class="node" data-id="ex1" aria-label="DEN-Q01 example
+What kinds of music did people make in the incarceration camps, " style="left:135px;top:890px;width:580px;height:260px;--accent:#bdc7d2"><div class="node-body"><h3>DEN-Q01 example</h3>
+<p><em>What kinds of music did people make in the incarceration camps, and how did bands and dances contribute to their social lives?</em></p>
+<p>32 sources frozen: 21 interview segments, 9 photos or ephemera, 1 newspaper issue, 1 documentary record.</p>
+<p>We include hard negatives to test whether models can distinguish activities that happened inside the camps from similar activities that happened after incarceration.</p>
+</div></article>
+<article class="node" data-id="st1" aria-label="1. Build the evidence base
+What: for each query, a fixed set of candidate source" style="left:135px;top:604px;width:580px;height:260px;--accent:#35bb7e"><div class="node-body"><h3>1. Build the evidence base</h3>
+<p><strong>What:</strong> for each query, a fixed set of candidate sources: interview segments, photographs, documents, films.
+<strong>How:</strong> search the collection; read every segment in full and inspect every image; deliberately add near-misses and distractors; freeze the set under a version number.
+<strong>Why:</strong> a fixed, fully judged set makes models comparable and prevents scoring well by luck or keyword overlap.</p>
+</div></article>
+<article class="node" data-id="c2b" aria-label="Kinds of reference points
+Core Content: Does the answer include the key informat" style="left:1095px;top:910px;width:580px;height:210px;--accent:#d5a72b"><div class="node-body"><h3>Kinds of reference points</h3>
+<p><strong>Core Content:</strong> Does the answer include the key information?
+<strong>Required Qualifications:</strong> Does it preserve historical context and correct attribution?
+<strong>Conditional Points:</strong> If a specific topic is mentioned, is it handled accurately?
+<strong>Visual Points:</strong> Does the answer correctly use visual evidence? <em>(Condition B only)</em></p>
+</div></article>
+<article class="node" data-id="c2c" aria-label="Designed traps
+We include historically similar but distinct sources to test whet" style="left:1095px;top:1146px;width:580px;height:210px;--accent:#d5a72b"><div class="node-body"><h3>Designed traps</h3>
+<p>We include historically similar but distinct sources to test whether models make unsupported connections.</p>
+<p><strong>Example:</strong> Confusing the Matinee Orchestra with the Hawaiian Serenaders is flagged as a <strong>Critical Error (CE1)</strong>.</p>
+</div></article>
+<article class="node node-question" data-id="fb2" aria-label="Question for the Board
+Who should validate ground truth for oral history collect" style="left:1095px;top:1382px;width:580px;height:160px;--accent:#e38d44"><div class="node-body"><h3>Question for the Board</h3>
+<p>Who should validate ground truth for oral history collections?
+What counts as a <strong>serious misrepresentation</strong> of a narrator, and are our traps and required qualifications the right ones?</p>
+</div></article>
+<article class="node" data-id="st2" aria-label="2. Establish the ground truth
+What: decide what a correct output contains before" style="left:1095px;top:574px;width:580px;height:310px;--accent:#d5a72b"><div class="node-body"><h3>2. Establish the ground truth</h3>
+<p><strong>What:</strong> decide what a correct output contains <em>before</em> any model runs.
+<strong>How:</strong> grade every source for relevance (2 relevant, 1 partial, 0 not relevant); write a reference answer and break it into <strong>reference points</strong>; link each point to the exact quote or image region that supports it.
+<strong>Why:</strong> outputs are judged against documented evidence, not against an evaluator's impression.
+<strong>Status:</strong> developed; needs expert validation.</p>
+</div></article>
+<article class="node" data-id="c3b" aria-label="Two input conditions
+AM: transcripts and catalog text, no images.
+B: the same pl" style="left:2055px;top:940px;width:580px;height:240px;--accent:#35bb7e"><div class="node-body"><h3>Two input conditions</h3>
+<p><strong>AM:</strong> transcripts and catalog text, no images.
+<strong>B:</strong> the same plus the image files.
+Comparing B with AM isolates the contribution of images.
+<strong>Caution:</strong> a score difference alone does not prove visual understanding. Questions answerable only from the images provide that evidence.</p>
+</div></article>
+<article class="node node-question" data-id="fb3" aria-label="Question for the Board
+Is this a credible test of whether models use images?
+How" style="left:2055px;top:1206px;width:580px;height:160px;--accent:#e38d44"><div class="node-body"><h3>Question for the Board</h3>
+<p>Is this a credible test of whether models use images?
+How should the later <strong>audio, video and timestamp</strong> queries be designed, and which additional open models should we include?</p>
+</div></article>
+<article class="node" data-id="st3" aria-label="3. Run models under controlled conditions
+What: every model gets identical promp" style="left:2055px;top:574px;width:580px;height:340px;--accent:#25bfc2"><div class="node-body"><h3>3. Run models under controlled conditions</h3>
+<p><strong>What:</strong> every model gets identical prompts and the same frozen sources.
+<strong>How:</strong> 3 models (ChatGPT, Gemini, a vision-capable LLaMA) x 3 prompting strategies (zero-shot, few-shot, chain-of-thought) x 2 input conditions. Tasks: retrieval, question answering, summary, and short image questions.
+<strong>Why:</strong> differences can be traced to the model, the strategy or the input, not to changed materials.
+<strong>Status:</strong> inputs prepared; model versions proposed; <strong>no runs yet.</strong></p>
+</div></article>
+<article class="node" data-id="measures" aria-label="What the framework measures
+The proposal&#x27;s four evaluation dimensions, made conc" style="left:3145px;top:80px;width:720px;height:290px;--accent:#9467e9"><div class="node-body"><h2>What the framework measures</h2>
+<p>The proposal's four evaluation dimensions, made concrete:</p>
+<ul>
+<li><strong>Grounding and citation accuracy:</strong> are claims supported by the cited sources?</li>
+<li><strong>Hallucination:</strong> unsupported or contradicted claims, including designed traps</li>
+<li><strong>Coverage:</strong> does the answer include the required content?</li>
+<li><strong>Interpretive fidelity</strong> (the bias dimension): are narrators represented faithfully?</li>
+<li><strong>Privacy:</strong> what data leaves the institution?
+Plus <strong>cross-modal evidence use:</strong> do images add anything beyond text?</li>
+</ul>
+</div></article>
+<article class="node" data-id="title" aria-label="ORAL-AI benchmark methodology, piloted on DEN-Q01
+The benchmark: 30 queries acro" style="left:105px;top:70px;width:1430px;height:290px;--accent:#9467e9"><div class="node-body"><h2>ORAL-AI benchmark methodology, piloted on DEN-Q01</h2>
+<p><strong>The benchmark:</strong> 30 queries across three collections (Densho, Civil Rights History, Veterans History). Each is tested on retrieval, question answering and summarization, with ChatGPT, Gemini and LLaMA under three prompting strategies (Task 1.2).
+<strong>DEN-Q01</strong> (music, bands and dances in the incarceration camps) is the first item built end to end. It serves here as the worked example of the method.
+<strong>Status:</strong> framework developed; expert validation pending; <strong>no model evaluations have been run.</strong></p>
+</div></article>
+<article class="node" data-id="st4" aria-label="4. Score each output
+What: Evaluate model outputs against predefined ground trut" style="left:3255px;top:570px;width:580px;height:334px;--accent:#8A9099"><div class="node-body"><h3>4. Score each output</h3>
+<p><strong>What:</strong> Evaluate model outputs against predefined ground truth.
+<strong>How:</strong></p>
+<ul>
+<li><strong>QA &amp; Summarization:</strong> Score reference-point coverage (0–2) and check individual claims for factual support.</li>
+<li><strong>Retrieval:</strong> Use relevance grades (0–2) to calculate P@5 and nDCG@5.</li>
+<li><strong>Errors:</strong> Record unsupported claims, incorrect citations, critical errors, and bias separately.
+<strong>Why:</strong> Identify not just how well a model performs, but where and why it makes mistakes.
+<strong>Status:</strong> Scoring framework prepared; model evaluation pending.</li>
+</ul>
+</div></article>
+<article class="node" data-id="c4s" aria-label="How We Score Model Outputs
+
+Each claim: supported, partial, unsupported or contr" style="left:3255px;top:930px;width:580px;height:290px;--accent:#8A9099"><div class="node-body"><h3>How We Score Model Outputs</h3>
+<ul>
+<li><strong>Each claim:</strong> supported, partial, unsupported or contradicted</li>
+<li><strong>Each citation:</strong> correct or not</li>
+<li><strong>Reference Point Coverage:</strong> 0 = Missing/Wrong, 1 = Partial, 2 = Complete &amp; Accurate</li>
+<li><strong>Critical errors, fidelity checks:</strong> yes or no, each</li>
+<li><strong>Image questions:</strong> 0, 1 or 2</li>
+<li><strong>Retrieval:</strong> ranking quality and precision, computed automatically and compared with chance</li>
+<li><strong>Privacy:</strong> Track where data is sent and whether it is stored by the model provider.</li>
+</ul>
+</div></article>
+<article class="node" data-id="ex4" aria-label="Example: scoring one reference point
+Point: dances were frequent and usually hel" style="left:3255px;top:1246px;width:580px;height:240px;--accent:#bdc7d2"><div class="node-body"><h3>Example: scoring one reference point</h3>
+<p><em>Point:</em> dances were frequent and usually held in mess halls.
+<strong>2:</strong> &quot;Narrators describe dances every week or two, mostly in mess halls cleared of tables [T02, T07].&quot;
+<strong>1:</strong> &quot;There were dances in camp [T07].&quot; (correct but incomplete)
+<strong>0:</strong> the point is missing or wrong.
+<em>Illustrative answers written for this map, not model outputs.</em></p>
+</div></article>
+<article class="node" data-id="c4m" aria-label="What the Scores Tell Us
+
+Supported Claims: Percentage of claims supported by evi" style="left:3255px;top:1512px;width:580px;height:358px;--accent:#8A9099"><div class="node-body"><h3>What the Scores Tell Us</h3>
+<ul>
+<li><strong>Supported Claims:</strong> Percentage of claims supported by evidence.</li>
+<li><strong>Hallucination Rate:</strong> Percentage of claims that are unsupported or contradict the evidence.</li>
+<li><strong>Citation Accuracy:</strong> Percentage of claims citing the correct sources.</li>
+<li><strong>Core Coverage:</strong> How well the model covers the expected key information.</li>
+<li><strong>Visual Coverage:</strong> How accurately the model uses information from images.</li>
+<li><strong>Critical Errors &amp; Bias:</strong> Serious historical mistakes and misrepresentations, reported separately so they are not hidden by high scores.</li>
+</ul>
+</div></article>
+<article class="node node-question" data-id="fb4" aria-label="Question for the Board
+Is a 0 / 1 / 2 scale fine-grained enough for oral history" style="left:3255px;top:1890px;width:580px;height:160px;--accent:#e38d44"><div class="node-body"><h3>Question for the Board</h3>
+<p>Is a 0 / 1 / 2 scale fine-grained enough for oral history answers?
+Should critical errors and fidelity problems stay separate from coverage, as we propose, or be combined into one score?</p>
+</div></article>
+<article class="node" data-id="st5" aria-label="5. Make the Scoring Reliable
+What: Reduce subjectivity in human evaluation.
+How:" style="left:4395px;top:614px;width:580px;height:290px;--accent:#8A9099"><div class="node-body"><h3>5. Make the Scoring Reliable</h3>
+<p><strong>What:</strong> Reduce subjectivity in human evaluation.
+<strong>How:</strong> Two independent blind scorers evaluate each output using the same scoring guide. We measure their agreement and resolve disagreements through adjudication.
+<strong>Why:</strong> Ensure that scoring is consistent and not dependent on one person's judgment.</p>
+<p><strong>Status:</strong> Scoring protocol prepared; not yet tested.</p>
+</div></article>
+<article class="node" data-id="c5b" aria-label="Expert Validation
+Before scoring model outputs, domain experts will review and v" style="left:4395px;top:930px;width:580px;height:160px;--accent:#d5a72b"><div class="node-body"><h3>Expert Validation</h3>
+<p>Before scoring model outputs, domain experts will review and validate our ground truth to ensure its accuracy.</p>
+</div></article>
+<article class="node" data-id="c5c" aria-label="Scaling to 30 queries
+Human double scoring for the pilot. An automated judge may" style="left:4395px;top:1116px;width:580px;height:190px;--accent:#8A9099"><div class="node-body"><h3>Scaling to 30 queries</h3>
+<p>Human double scoring for the pilot. An automated judge may assist later, but only for criteria where it agrees with human scorers at least as well as they agree with each other. Critical errors and fidelity stay with people.</p>
+</div></article>
+<article class="node node-question" data-id="fb5" aria-label="Question for the Board
+Is blind double scoring with adjudication the right stand" style="left:4395px;top:1332px;width:580px;height:190px;--accent:#e38d44"><div class="node-body"><h3>Question for the Board</h3>
+<p>Is blind double scoring with adjudication the right standard for this domain?
+Under what conditions would you trust automated scoring of oral history answers?</p>
+</div></article>
+<article class="node" data-id="st6" aria-label="6. Interpret the Results
+Goal: Determine whether higher scores reflect meaningfu" style="left:5415px;top:614px;width:580px;height:356px;--accent:#35bb7e"><div class="node-body"><h3>6. Interpret the Results</h3>
+<p><strong>Goal:</strong> Determine whether higher scores reflect meaningful improvements in model performance.</p>
+<p><strong>How:</strong></p>
+<ul>
+<li>Compare retrieval with random selection and keyword search.</li>
+<li>Examine accuracy, coverage, hallucinations, and critical errors separately.</li>
+<li>Check whether images provide real benefits beyond text.</li>
+<li>Consider the limitations of a single-query pilot.</li>
+</ul>
+<p><strong>Why:</strong> A higher score alone does not prove that a model is more accurate, reliable, or better at understanding images.</p>
+</div></article>
+<article class="node" data-id="c6b" aria-label="What one pilot item cannot show
+
+Which model is best
+Audio, video and timestamp " style="left:5415px;top:1001px;width:580px;height:210px;--accent:#9467e9"><div class="node-body"><h3>What one pilot item cannot show</h3>
+<ul>
+<li>Which model is best</li>
+<li>Audio, video and timestamp skills (planned for later queries)</li>
+<li>Bias across demographic groups (needs comparisons across collections)</li>
+<li>Memorization risk (needs a separate test)</li>
+</ul>
+</div></article>
+<article class="node" data-id="c6c" aria-label="What the pilot is for
+Testing the protocol (workflow, scoring reliability, feasi" style="left:5415px;top:1246px;width:580px;height:140px;--accent:#9467e9"><div class="node-body"><h3>What the pilot is for</h3>
+<p>Testing the protocol (workflow, scoring reliability, feasibility) before the full benchmark, not comparing models.</p>
+</div></article>
+<article class="node" data-id="p_dev" aria-label="Developed So Far
+So far, we have prepared:
+
+The overall benchmark design
+The evi" style="left:95px;top:1754px;width:650px;height:318px;--accent:#35bb7e"><div class="node-body"><h3>Developed So Far</h3>
+<p>So far, we have prepared:</p>
+<ul>
+<li>The overall benchmark design</li>
+<li>The evidence base and draft ground truth for DEN-Q01</li>
+<li>Model inputs for both conditions (AM and B)</li>
+<li>Prompts for three strategies: Zero-shot, Few-shot, and Chain-of-Thought</li>
+<li>The evaluation criteria and scoring guide</li>
+<li>A blind double-scoring protocol</li>
+<li>Materials for expert validation</li>
+</ul>
+</div></article>
+<article class="node" data-id="p_val" aria-label="Still Needs Validation or Confirmation
+
+Have experts review the DEN-Q01 ground t" style="left:865px;top:1754px;width:520px;height:318px;--accent:#d5a72b"><div class="node-body"><h3>Still Needs Validation or Confirmation</h3>
+<ul>
+<li>Have experts review the DEN-Q01 ground truth.</li>
+<li>Confirm that our query reflects real user needs.</li>
+<li>Validate the scoring criteria and historical accuracy checks.</li>
+<li>Finalize the models and their versions.</li>
+<li>Decide when to include audio and video evaluation.</li>
+</ul>
+</div></article>
+<article class="node" data-id="p_next" aria-label="What Comes Next
+
+Expert Review: Validate the ground truth and scoring criteria.
+" style="left:1505px;top:1754px;width:540px;height:318px;--accent:#8A9099"><div class="node-body"><h3>What Comes Next</h3>
+<ul>
+<li><strong>Expert Review:</strong> Validate the ground truth and scoring criteria.</li>
+<li><strong>Pilot Testing:</strong> Conduct 61 planned runs and evaluate outputs using automated metrics and blind human scoring.</li>
+<li><strong>Refinement:</strong> Improve the benchmark design and scoring guide based on pilot findings.</li>
+<li><strong>Expansion:</strong> Develop the remaining 29 queries, including audio and video.</li>
+<li><strong>Final Analysis:</strong> Identify limitations and develop design requirements (Tasks 1.3 and 1.4).</li>
+</ul>
+</div></article></div></main>
+<aside class="help">Drag the background to pan · Use your mouse wheel to zoom · Select a station above to focus</aside>
+<script>
+(()=>{
+const viewport=document.getElementById('viewport'),stage=document.getElementById('stage'), zoomLabel=document.getElementById('zoom');
+const worldW=6095,worldH=2222;
+let scale=.35, tx=0,ty=0,drag=null;
+function redraw(){stage.style.transform=`translate(${tx}px,${ty}px) scale(${scale})`;zoomLabel.textContent=`${Math.round(scale*100)}%`;}
+function focus(x,y,newScale){scale=Math.max(.12,Math.min(2.2,newScale));tx=viewport.clientWidth/2 - x*scale;ty=viewport.clientHeight/2-y*scale;redraw();}
+function fit(){let vw=viewport.clientWidth,vh=viewport.clientHeight;focus(worldW/2,worldH/2,Math.min((vw-45)/worldW,(vh-65)/worldH));}
+function zoomBy(f,cx=viewport.clientWidth/2,cy=viewport.clientHeight/2){const wx=(cx-tx)/scale,wy=(cy-ty)/scale;scale=Math.max(.12,Math.min(2.2,scale*f));tx=cx-wx*scale;ty=cy-wy*scale;redraw();}
+viewport.addEventListener('pointerdown',e=>{if(e.button!==0 || e.target.closest('a'))return;drag={x:e.clientX,y:e.clientY,tx,ty};viewport.setPointerCapture(e.pointerId);viewport.classList.add('dragging');});
+viewport.addEventListener('pointermove',e=>{if(!drag)return;tx=drag.tx+e.clientX-drag.x;ty=drag.ty+e.clientY-drag.y;redraw();});
+const stop=()=>{drag=null;viewport.classList.remove('dragging');};viewport.addEventListener('pointerup',stop);viewport.addEventListener('pointercancel',stop);
+viewport.addEventListener('wheel',e=>{e.preventDefault();const rect=viewport.getBoundingClientRect();zoomBy(e.deltaY<0?1.12:.89,e.clientX-rect.left,e.clientY-rect.top);},{passive:false});
+document.getElementById('fit').onclick=fit;document.getElementById('plus').onclick=()=>zoomBy(1.3);document.getElementById('minus').onclick=()=>zoomBy(1/1.3);document.getElementById('hundred').onclick=()=>focus(worldW/2,worldH/2,1);
+document.querySelectorAll('[data-focus]').forEach(b=>b.onclick=()=>{let el=[...document.querySelectorAll('.group')].find(g=>g.getAttribute('aria-label')?.startsWith('Station '+b.dataset.focus.slice(1)+' -'));if(!el)return;const x=parseFloat(el.style.left)+parseFloat(el.style.width)/2;const y=parseFloat(el.style.top)+parseFloat(el.style.height)/2;focus(x,y,Math.min(.9,(viewport.clientWidth-120)/760,(viewport.clientHeight-90)/(parseFloat(el.style.height)+150)));});
+window.addEventListener('resize',fit);window.addEventListener('keydown',e=>{if(e.key==='0')fit();else if(/[1-6]/.test(e.key))document.querySelector(`[data-focus="S${e.key}"]`)?.click();});fit();
+})();
+</script>
+</body></html>
